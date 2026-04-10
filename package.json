@@ -1,7 +1,7 @@
 {
-  "name": "outside",
+  "name": "travel-inspiration-hub",
   "version": "2.0.0",
-  "description": "Boilerplate for WDD 330 SleepOutside project",
+  "description": "Travel Inspiration Hub built with HTML, CSS, and vanilla JavaScript",
   "main": "main.js",
   "scripts": {
     "start": "vite",

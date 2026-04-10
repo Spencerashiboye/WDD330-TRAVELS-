@@ -1,27 +1,31 @@
-# BYU-Pathway Worldwide Online
-## WDD 330 - Web Frontend Development II
+# Travel Inspiration Hub
 
-### ⛺ SleepOutside Starter Code
+Travel Inspiration Hub is a responsive vanilla JavaScript web app for discovering destinations, viewing live destination context, comparing trip ideas, and saving favorites.
 
- - This repository is the start of the SleepOutside web application project for WDD 330. The repository contains branches which are checkpoints for the team and individual assignments throughout the course.
+## Project Scope
 
- - https://byui-cse.github.io/wdd330-ww-course/week01/team.html
+- HTML, CSS, and vanilla JavaScript only
+- Responsive layout with accessible controls and semantic markup
+- CSS animation for card reveal and interaction feedback
+- Dynamic destination details powered by external APIs
+- Favorites, recent searches, and flight comparison saved in local storage
 
-### Prerequisites
+## External Data Sources
 
-- You must have Node installed to run the following commands.
-[WDD 330 Setup Environment](https://byui-cse.github.io/wdd330-ww-course/intro/) 
+- Teleport API for city imagery and urban area scores
+- REST Countries API for country facts
+- Wikipedia REST API for destination summaries
 
-### Common Workflow Commands
+## Flight Search Note
 
-- `npm run lint` to run ESLint against your code to find errors.
-- `npm run format` to run Prettier to automatically format your code.
-- `npm run start` starts up a local server and updates on any JS or CSS/SCSS 
-- `npm run build` to build final files when you are ready to turn in.
+The app includes a fully operational browser-side flight comparison engine. A live Skyscanner integration is not included in this frontend-only build because Skyscanner access requires authenticated server-side infrastructure. The current route planner keeps the project functional while preserving the proposal structure for a later backend upgrade.
 
+## Commands
 
----
-_BYU-Pathway Worldwide improves lives through access to spiritually based, online affordable higher education. Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities._
+- `npm run start` starts the Vite development server.
+- `npm run lint` checks the JavaScript files with ESLint.
+- `npm run build` builds the production bundle.
+- `npm run format` formats project files with Prettier.
 
 
 
