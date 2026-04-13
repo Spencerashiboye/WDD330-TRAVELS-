@@ -57,6 +57,10 @@ function getDefaultDate() {
 }
 
 function setStatus(message) {
+  if (!elements.liveRegion) {
+    return;
+  }
+
   elements.liveRegion.textContent = '';
   window.requestAnimationFrame(() => {
     elements.liveRegion.textContent = message;
@@ -121,6 +125,10 @@ function buildFlightResults({ origin, destination, departureDate, travelers, cab
 }
 
 function syncFlightForm(destinationId = state.selectedDestinationId) {
+  if (!elements.originInput || !elements.destinationInput || !elements.dateInput) {
+    return;
+  }
+
   elements.originInput.innerHTML = renderOriginOptions(ORIGIN_AIRPORTS, ORIGIN_AIRPORTS[0].code);
   elements.destinationInput.innerHTML = renderFlightDestinationOptions(DESTINATIONS, destinationId);
   if (!elements.dateInput.value) {
@@ -129,11 +137,19 @@ function syncFlightForm(destinationId = state.selectedDestinationId) {
 }
 
 function renderSearchControls() {
+  if (!elements.filterChips || !elements.recentSearches) {
+    return;
+  }
+
   elements.filterChips.innerHTML = renderFilterChips(FILTERS, state.activeFilter);
   elements.recentSearches.innerHTML = renderRecentSearches(state.recentSearches);
 }
 
 function renderDestinations() {
+  if (!elements.destinationGrid) {
+    return;
+  }
+
   const filteredDestinations = getFilteredDestinations();
   elements.destinationGrid.innerHTML = renderDestinationGrid(
     filteredDestinations,
@@ -145,6 +161,10 @@ function renderDestinations() {
 }
 
 function renderDetails() {
+  if (!elements.destinationDetails) {
+    return;
+  }
+
   const destination = findDestinationById(state.selectedDestinationId);
   const isFavorite = state.favoriteDestinations.some((item) => item.id === state.selectedDestinationId);
   elements.destinationDetails.innerHTML = renderDestinationDetails(
@@ -155,6 +175,10 @@ function renderDetails() {
 }
 
 function renderFlights() {
+  if (!elements.flightResults) {
+    return;
+  }
+
   elements.flightResults.innerHTML = renderFlightResults(
     state.flightResults,
     state.compareFlights,
@@ -164,11 +188,19 @@ function renderFlights() {
 }
 
 function renderCompareSection() {
+  if (!elements.compareResults) {
+    return;
+  }
+
   elements.compareResults.innerHTML = renderCompare(state.compareFlights);
   animateCards(elements.compareResults);
 }
 
 function renderFavoritesSection() {
+  if (!elements.favoritesContent) {
+    return;
+  }
+
   elements.favoritesContent.innerHTML = renderFavorites(
     state.favoriteDestinations,
     state.favoriteFlights
@@ -217,7 +249,7 @@ function toggleDestinationFavorite(destinationId) {
     city: destination.city,
     country: destination.country,
     id: destination.id,
-    imageUrl: details?.imageUrl ?? ''
+    imageUrl: destination.imageUrl || details?.imageUrl || ''
   });
   renderDestinations();
   renderDetails();
@@ -252,7 +284,9 @@ function toggleFlightCompareState(flightId) {
   state.compareFlights = toggleCompareFlight(flight);
   renderFlights();
   renderCompareSection();
-  pulseElement(elements.compareResults.closest('.panel'));
+  if (elements.compareResults) {
+    pulseElement(elements.compareResults.closest('.panel'));
+  }
   setStatus(`Route ${flight.originCode} to ${flight.destinationCode} updated in comparison.`);
 }
 
@@ -295,7 +329,9 @@ function handleFilterChange(filterId) {
 function handleFlightSearch(search) {
   state.flightResults = buildFlightResults(search);
   renderFlights();
-  pulseElement(elements.flightResults.closest('.panel'));
+  if (elements.flightResults) {
+    pulseElement(elements.flightResults.closest('.panel'));
+  }
   setStatus(`Built ${state.flightResults.length} route options to ${findDestinationById(search.destination).city}.`);
 }
 
@@ -315,7 +351,10 @@ function handleSurprise() {
 }
 
 function initialize() {
-  elements.dateInput.value = getDefaultDate();
+  if (elements.dateInput) {
+    elements.dateInput.value = getDefaultDate();
+  }
+
   updateAllSections();
 
   setupEventHandlers({

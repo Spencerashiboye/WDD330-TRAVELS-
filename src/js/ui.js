@@ -78,8 +78,15 @@ export function renderDestinationGrid(destinations, favorites, detailsMap, selec
     .map((destination) => {
       const isFavorite = favorites.some((item) => item.id === destination.id);
       const details = detailsMap[destination.id];
-      const visual = details?.imageUrl
-        ? `<img src="${details.imageUrl}" alt="${escapeHtml(destination.city)} city view" />`
+      const imageUrl = destination.imageUrl || details?.imageUrl;
+      const visual = imageUrl
+        ? `
+          <img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(destination.city)} destination view" />
+          <div class="destination-visual-overlay">
+            <p>${escapeHtml(destination.region)}</p>
+            <h3>${escapeHtml(destination.city)}, ${escapeHtml(destination.country)}</h3>
+          </div>
+        `
         : `
           <div class="destination-fallback">
             <div>
@@ -150,7 +157,9 @@ export function renderDestinationDetails(destination, details, isFavorite) {
   return `
     <article class="detail-card">
       <div class="detail-media">
-        ${details.imageUrl ? `<img src="${details.imageUrl}" alt="${escapeHtml(destination.city)} skyline or cityscape" />` : ''}
+        ${(destination.imageUrl || details.imageUrl)
+          ? `<img src="${escapeHtml(destination.imageUrl || details.imageUrl)}" alt="${escapeHtml(destination.city)} skyline or cityscape" />`
+          : ''}
       </div>
       <div class="detail-body">
         <div class="detail-topline">

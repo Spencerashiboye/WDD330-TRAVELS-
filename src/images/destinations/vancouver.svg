@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Vancouver scenic illustration</title>
+  <desc id="desc">A stylized Vancouver waterfront with mountains, evergreens, and city towers.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b7efff"/>
+      <stop offset="58%" stop-color="#c7e6d4"/>
+      <stop offset="100%" stop-color="#7aa7c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="650" cy="92" r="40" fill="#fff9d7" opacity="0.9"/>
+  <path d="M0 280 L100 210 L180 250 L290 170 L380 255 L520 160 L640 245 L760 190 L800 220 L800 500 L0 500 Z" fill="#5e8da0"/>
+  <path d="M0 310 L120 248 L210 288 L320 212 L430 302 L560 206 L680 286 L800 238 L800 500 L0 500 Z" fill="#3f6975"/>
+  <rect y="355" width="800" height="145" fill="#4f82a3"/>
+  <g fill="#37536b">
+    <rect x="190" y="220" width="70" height="135"/>
+    <rect x="270" y="185" width="52" height="170"/>
+    <rect x="330" y="205" width="66" height="150"/>
+    <rect x="410" y="175" width="58" height="180"/>
+    <rect x="482" y="215" width="54" height="140"/>
+  </g>
+  <g fill="#ddf3ff">
+    <rect x="208" y="244" width="12" height="18"/>
+    <rect x="230" y="244" width="12" height="18"/>
+    <rect x="286" y="208" width="10" height="16"/>
+    <rect x="286" y="238" width="10" height="16"/>
+    <rect x="350" y="228" width="12" height="18"/>
+    <rect x="430" y="200" width="12" height="18"/>
+    <rect x="430" y="230" width="12" height="18"/>
+  </g>
+  <g fill="#234332">
+    <path d="M90 355 L120 292 L150 355 Z"/>
+    <rect x="116" y="355" width="8" height="40" fill="#4d3b29"/>
+    <path d="M610 355 L642 286 L674 355 Z"/>
+    <rect x="638" y="355" width="8" height="40" fill="#4d3b29"/>
+    <path d="M675 355 L705 300 L735 355 Z"/>
+    <rect x="701" y="355" width="8" height="40" fill="#4d3b29"/>
+  </g>
+  <path d="M0 404 C120 388 210 420 340 404 S560 386 800 410" stroke="#cfeaff" stroke-width="4" fill="none" opacity="0.5"/>
+</svg>

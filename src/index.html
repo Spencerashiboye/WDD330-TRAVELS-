@@ -26,17 +26,18 @@
       </a>
 
       <nav class="site-nav" aria-label="Primary navigation">
-        <button type="button" data-scroll-target="explore">Explore</button>
-        <button type="button" data-scroll-target="flights">Flights</button>
-        <button type="button" data-scroll-target="compare">Compare</button>
-        <button type="button" data-scroll-target="favorites">Favorites</button>
+        <a href="/" aria-current="page">Home</a>
+        <a href="/explore/">Explore</a>
+        <a href="/flights/">Flights</a>
+        <a href="/compare/">Compare</a>
+        <a href="/favorites/">Favorites</a>
       </nav>
     </header>
 
     <main id="main-content">
       <section class="hero panel" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">Project Proposal: Travel Inspiration Hub</p>
+          <!-- <p class="eyebrow">Project Proposal: Travel Inspiration Hub</p> -->
           <h1>Discover destinations, compare travel ideas, and save the trips worth revisiting.</h1>
           <p class="hero-text">
             This browser-first app combines destination inspiration with practical trip planning.
@@ -44,21 +45,26 @@
             favorites, comparison, and recent searches are stored locally.
           </p>
           <div class="hero-actions">
-            <button type="button" class="primary-button" id="hero-explore-button" data-scroll-target="explore">
+            <a class="primary-button" id="hero-explore-button" href="/explore/">
               Explore destinations
-            </button>
+            </a>
             <button type="button" class="secondary-button" id="surprise-button">
               Surprise me
             </button>
           </div>
         </div>
 
-        <div class="hero-stats" aria-label="Key app features">
-          <article>
-            <p class="stat-value">6</p>
-            <p class="stat-label">Curated cities with live destination data</p>
-          </article>
-         
+        <div class="hero-aside">
+          <figure class="hero-visual">
+            <img src="/images/hero-travel-scene.svg" alt="Illustrated travel collage showing featured destinations and route planning cards" />
+          </figure>
+
+          <div class="hero-stats" aria-label="Key app features">
+            <article>
+              <p class="stat-value">8</p>
+              <p class="stat-label">Curated cities with live destination data</p>
+            </article>
+          </div>
         </div>
       </section>
 

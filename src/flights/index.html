@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Build destination routes and compare travel options on the Travel Inspiration Hub flights page."
+    />
+    <title>Flights | Travel Inspiration Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Travel Inspiration Hub home">
+        <img src="/images/logo-travel-hub.svg" alt="" width="56" height="56" />
+        <span>Travel <strong>Inspiration Hub</strong></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/explore/">Explore</a>
+        <a href="/flights/" aria-current="page">Flights</a>
+        <a href="/compare/">Compare</a>
+        <a href="/favorites/">Favorites</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero panel" id="top">
+        <div class="hero-copy">
+          <h1>Build routes on a dedicated flights page.</h1>
+          <p class="hero-text">
+            Choose an origin, pick a destination, and generate route options without leaving the section-focused page.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="/compare/">Open compare page</a>
+            <a class="secondary-button" href="/explore/">Explore destinations</a>
+          </div>
+        </div>
+
+        <div class="hero-aside">
+          <figure class="hero-visual">
+            <img src="/images/hero-travel-scene.svg" alt="Illustrated travel collage with featured destination cards" />
+          </figure>
+          <div class="hero-stats" aria-label="Flight page highlights">
+            <article>
+              <p class="stat-value">3</p>
+              <p class="stat-label">Route options generated per search</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel flight-panel" id="flights" aria-labelledby="flight-planner-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Search Flights</p>
+            <h2 id="flight-planner-heading">Build a flight comparison.</h2>
+          </div>
+          <p class="section-copy">
+            Results below use a deterministic browser-side deal engine so the feature stays fully operational in a frontend-only deployment.
+          </p>
+        </div>
+
+        <form id="flight-search-form" class="flight-form">
+          <label>
+            Origin
+            <select id="origin-input" name="origin"></select>
+          </label>
+
+          <label>
+            Destination
+            <select id="destination-input" name="destination"></select>
+          </label>
+
+          <label>
+            Departure
+            <input type="date" id="date-input" name="departureDate" required />
+          </label>
+
+          <label>
+            Travelers
+            <select id="traveler-input" name="travelers">
+              <option value="1">1 traveler</option>
+              <option value="2" selected>2 travelers</option>
+              <option value="3">3 travelers</option>
+              <option value="4">4 travelers</option>
+            </select>
+          </label>
+
+          <label>
+            Cabin
+            <select id="cabin-input" name="cabin">
+              <option value="economy" selected>Economy</option>
+              <option value="premium">Premium</option>
+              <option value="business">Business</option>
+            </select>
+          </label>
+
+          <button type="submit" class="primary-button">Find routes</button>
+        </form>
+
+        <div id="flight-results" class="flight-results" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Travel Inspiration Hub. Ashiboye Spencer 💚. ©️2026</p>
+    </footer>
+
+    <div id="live-region" class="sr-only" aria-live="polite"></div>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

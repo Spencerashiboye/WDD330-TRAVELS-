@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Review shortlisted routes on the Travel Inspiration Hub compare page."
+    />
+    <title>Compare Routes | Travel Inspiration Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Travel Inspiration Hub home">
+        <img src="/images/logo-travel-hub.svg" alt="" width="56" height="56" />
+        <span>Travel <strong>Inspiration Hub</strong></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/explore/">Explore</a>
+        <a href="/flights/">Flights</a>
+        <a href="/compare/" aria-current="page">Compare</a>
+        <a href="/favorites/">Favorites</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero panel" id="top">
+        <div class="hero-copy">
+          <h1>Compare saved routes on a separate page.</h1>
+          <p class="hero-text">
+            When you add routes from the flights page, they stay saved locally and appear here for side-by-side review.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="/flights/">Find routes</a>
+            <a class="secondary-button" href="/favorites/">View favorites</a>
+          </div>
+        </div>
+
+        <div class="hero-aside">
+          <figure class="hero-visual">
+            <img src="/images/hero-travel-scene.svg" alt="Illustrated travel collage with featured route cards" />
+          </figure>
+          <div class="hero-stats" aria-label="Compare page highlights">
+            <article>
+              <p class="stat-value">4</p>
+              <p class="stat-label">Routes can be compared at once</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="compare" aria-labelledby="compare-heading">
+        <div class="section-heading compact-heading">
+          <div>
+            <p class="section-kicker">Compare Deals</p>
+            <h2 id="compare-heading">Shortlisted routes</h2>
+          </div>
+          <p class="section-copy">Use the flights page to add routes, then review them here on their own page.</p>
+        </div>
+        <div id="compare-results" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Travel Inspiration Hub. Ashiboye Spencer 💚. ©️2026</p>
+    </footer>
+
+    <div id="live-region" class="sr-only" aria-live="polite"></div>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

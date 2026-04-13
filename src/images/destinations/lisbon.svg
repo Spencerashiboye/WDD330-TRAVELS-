@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Lisbon scenic illustration</title>
+  <desc id="desc">A stylized Lisbon waterfront with tram wires, tiled buildings, and a warm sunset sky.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd39a"/>
+      <stop offset="65%" stop-color="#ff9e7a"/>
+      <stop offset="100%" stop-color="#3f78b5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="640" cy="110" r="54" fill="#fff3bf" opacity="0.9"/>
+  <rect y="340" width="800" height="160" fill="#245d8f"/>
+  <path d="M0 345 C120 320 180 355 280 340 S490 315 800 350 L800 500 L0 500 Z" fill="#2d6ea6"/>
+  <path d="M0 330 L120 265 L210 305 L320 220 L455 298 L560 230 L700 290 L800 245 L800 500 L0 500 Z" fill="#274a68" opacity="0.45"/>
+  <rect x="120" y="220" width="88" height="120" fill="#f7f1dd"/>
+  <rect x="210" y="188" width="106" height="152" fill="#f2c38b"/>
+  <rect x="322" y="212" width="124" height="128" fill="#efe7d7"/>
+  <rect x="448" y="176" width="100" height="164" fill="#ffd8b0"/>
+  <rect x="554" y="210" width="120" height="130" fill="#f5eee6"/>
+  <rect x="588" y="136" width="22" height="74" fill="#de8a3b"/>
+  <path d="M574 143 L622 143 L598 112 Z" fill="#f4b25f"/>
+  <g fill="#6a88b2">
+    <rect x="135" y="238" width="16" height="16"/>
+    <rect x="160" y="238" width="16" height="16"/>
+    <rect x="135" y="264" width="16" height="16"/>
+    <rect x="160" y="264" width="16" height="16"/>
+    <rect x="226" y="212" width="18" height="20"/>
+    <rect x="256" y="212" width="18" height="20"/>
+    <rect x="286" y="212" width="18" height="20"/>
+    <rect x="226" y="245" width="18" height="20"/>
+    <rect x="286" y="245" width="18" height="20"/>
+    <rect x="348" y="236" width="18" height="18"/>
+    <rect x="378" y="236" width="18" height="18"/>
+    <rect x="408" y="236" width="18" height="18"/>
+    <rect x="348" y="266" width="18" height="18"/>
+    <rect x="408" y="266" width="18" height="18"/>
+  </g>
+  <path d="M80 206 L720 182" stroke="#2f4d67" stroke-width="4" opacity="0.5"/>
+  <path d="M86 220 L706 196" stroke="#2f4d67" stroke-width="2" opacity="0.35"/>
+  <rect x="276" y="288" width="92" height="42" rx="10" fill="#ffcb42"/>
+  <rect x="290" y="300" width="16" height="12" fill="#3f78b5"/>
+  <rect x="312" y="300" width="16" height="12" fill="#3f78b5"/>
+  <rect x="334" y="300" width="16" height="12" fill="#3f78b5"/>
+  <circle cx="300" cy="333" r="9" fill="#25384d"/>
+  <circle cx="344" cy="333" r="9" fill="#25384d"/>
+</svg>

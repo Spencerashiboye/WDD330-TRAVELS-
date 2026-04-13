@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse destination inspiration, visuals, and travel details in the Travel Inspiration Hub explore page."
+    />
+    <title>Explore Destinations | Travel Inspiration Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Travel Inspiration Hub home">
+        <img src="/images/logo-travel-hub.svg" alt="" width="56" height="56" />
+        <span>Travel <strong>Inspiration Hub</strong></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/explore/" aria-current="page">Explore</a>
+        <a href="/flights/">Flights</a>
+        <a href="/compare/">Compare</a>
+        <a href="/favorites/">Favorites</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero panel" id="top">
+        <div class="hero-copy">
+          <h1>Explore destinations on their own page.</h1>
+          <p class="hero-text">
+            Browse visual destination cards, search by travel style, and load place details without staying on the homepage.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="/flights/">Go to flights</a>
+            <a class="secondary-button" href="/">Back home</a>
+          </div>
+        </div>
+
+        <div class="hero-aside">
+          <figure class="hero-visual">
+            <img src="/images/hero-travel-scene.svg" alt="Illustrated travel collage with destination cards and route planning" />
+          </figure>
+          <div class="hero-stats" aria-label="Explore page highlights">
+            <article>
+              <p class="stat-value">8</p>
+              <p class="stat-label">Destinations ready to explore</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel search-panel" id="explore">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Explore Destinations</p>
+            <h2>Start with a mood, city, or travel style.</h2>
+          </div>
+          <p class="section-copy">
+            Search by destination name, country, or tags like budget, culture, food, or coastal.
+          </p>
+        </div>
+
+        <form id="destination-search-form" class="search-form" novalidate>
+          <label class="sr-only" for="destination-search-input">Search destinations</label>
+          <input
+            type="search"
+            id="destination-search-input"
+            name="destinationSearch"
+            placeholder="Search Accra, food, coastal, or family"
+            autocomplete="off"
+          />
+          <button type="submit" class="primary-button">Search</button>
+        </form>
+
+        <div id="filter-chips" class="chip-row" aria-label="Destination filters"></div>
+        <div id="recent-searches" class="recent-searches"></div>
+      </section>
+
+      <section class="content-grid">
+        <section class="panel" aria-labelledby="destination-list-heading">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="section-kicker">Visual Inspiration</p>
+              <h2 id="destination-list-heading">Destination shortlist</h2>
+            </div>
+            <p class="section-copy">Select any destination to load highlights, facts, and planning notes.</p>
+          </div>
+          <div id="destination-grid" class="destination-grid" aria-live="polite"></div>
+        </section>
+
+        <aside class="panel detail-panel" id="details" aria-labelledby="details-heading">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="section-kicker">Destination Details</p>
+              <h2 id="details-heading">Selected destination</h2>
+            </div>
+          </div>
+          <div id="destination-details" aria-live="polite"></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Travel Inspiration Hub. Ashiboye Spencer 💚. ©️2026</p>
+    </footer>
+
+    <div id="live-region" class="sr-only" aria-live="polite"></div>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
