@@ -1,3 +1,12 @@
+import accraImage from '../images/destinations/Accragh.jpg';
+import amsterdamImage from '../images/destinations/amsterdam.jpg';
+import capeTownImage from '../images/destinations/capetown.jpg';
+import lisbonImage from '../images/destinations/lisbon.jpg';
+import parisImage from '../images/destinations/Paris.jpg';
+import singaporeImage from '../images/destinations/singapore-city.jpg';
+import tokyoImage from '../images/destinations/tokyo.jpg';
+import vancouverImage from '../images/destinations/Vancouvercanada.jpg';
+
 export const FILTERS = [
   { id: 'all', label: 'All' },
   { id: 'culture', label: 'Culture' },
@@ -24,7 +33,7 @@ export const DESTINATIONS = [
     blurb: 'Sunlit viewpoints, tiled streets, and easy day trips make Lisbon an approachable city break.',
     city: 'Lisbon',
     country: 'Portugal',
-    imageUrl: '/images/destinations/lisbon.jpg',
+    imageUrl: lisbonImage,
     id: 'lisbon',
     region: 'Europe',
     slug: 'lisbon',
@@ -38,7 +47,7 @@ export const DESTINATIONS = [
     blurb: 'Paris blends iconic landmarks with neighborhoods that still reward wandering without a plan.',
     city: 'Paris',
     country: 'France',
-    imageUrl: '/images/destinations/Paris.jpg',
+    imageUrl: parisImage,
     id: 'paris',
     region: 'Europe',
     slug: 'paris',
@@ -52,7 +61,7 @@ export const DESTINATIONS = [
     blurb: 'Tokyo pairs intense city energy with quiet shrines, excellent transit, and unmatched food culture.',
     city: 'Tokyo',
     country: 'Japan',
-    imageUrl: '/images/destinations/tokyo.jpg',
+    imageUrl: tokyoImage,
     id: 'tokyo',
     region: 'Asia',
     slug: 'tokyo',
@@ -66,7 +75,7 @@ export const DESTINATIONS = [
     blurb: 'Amsterdam is compact, bike-friendly, and strong for museum days mixed with relaxed canal evenings.',
     city: 'Amsterdam',
     country: 'Netherlands',
-    imageUrl: '/images/destinations/amsterdam.jpg',
+    imageUrl: amsterdamImage,
     id: 'amsterdam',
     region: 'Europe',
     slug: 'amsterdam',
@@ -80,7 +89,7 @@ export const DESTINATIONS = [
     blurb: 'Vancouver balances urban comfort with direct access to mountains, water, and scenic day trips.',
     city: 'Vancouver',
     country: 'Canada',
-    imageUrl: '/images/destinations/Vancouvercanada.jpg',
+    imageUrl: vancouverImage,
     id: 'vancouver',
     region: 'North America',
     slug: 'vancouver',
@@ -94,7 +103,7 @@ export const DESTINATIONS = [
     blurb: 'Singapore is efficient, food-driven, and ideal for travelers who want a polished base in Southeast Asia.',
     city: 'Singapore',
     country: 'Singapore',
-    imageUrl: '/images/destinations/singapore-city.jpg',
+    imageUrl: singaporeImage,
     id: 'singapore',
     region: 'Asia',
     slug: 'singapore',
@@ -108,7 +117,7 @@ export const DESTINATIONS = [
     blurb: 'Accra offers Atlantic beaches, strong music culture, and energetic markets with an easy urban rhythm.',
     city: 'Accra',
     country: 'Ghana',
-    imageUrl: '/images/destinations/Accragh.jpg',
+    imageUrl: accraImage,
     id: 'accra',
     region: 'Africa',
     slug: 'accra',
@@ -122,7 +131,7 @@ export const DESTINATIONS = [
     blurb: 'Cape Town combines mountain views, ocean drives, and standout food scenes with dramatic outdoor access.',
     city: 'Cape Town',
     country: 'South Africa',
-    imageUrl: '/images/destinations/capetown.jpg',
+    imageUrl: capeTownImage,
     id: 'cape-town',
     region: 'Africa',
     slug: 'cape-town',
